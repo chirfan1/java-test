@@ -1,21 +1,27 @@
 import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Masukan Size : ");
-        int num = sc.nextInt();
+        int ck = 0, c = 2;
 
-        for (int i = 1; i<=num; i++){
-            for (int j = 1;j<num-(i-1);j++){
-                System.out.println(" ");
+        while (c > 0){
+            if (ck == 0){
+                for (int i = 1; i <=5; i++) {
+                    for (int j = 1; j <= i; j++){
+                        System.out.print(j);
+                    }
+                    System.out.println();
+                }
+                ck++;
             }
-            for (int k = 1; k<=i;k++){
-                System.out.print("*");
-                for (int k1 = 1;k1<k;k1+=k){
-                    System.out.print("*");
+            else {
+                for (int i = 1, r = 5-1; i <= 5-1; i++, r--) {
+                    for (int j = 1; j <= r; j++) {
+                        System.out.print(j);
+                    }
+                    System.out.println();
                 }
             }
-            System.out.println();
+            c--;
         }
     }
 }
